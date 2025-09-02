@@ -23,17 +23,33 @@
 - Caso algum item do RSS não contenha fonte (`<source>`), o código atribui `"Desconhecida"`.  
 - Isso garante que o script **não quebre** mesmo com feeds incompletos ou indisponíveis.
 
-### Próximos Passos Planejados
+### Etapa 2 – Processamento e Análise de Sentimento ✅
 
-- **Etapa 2: Processamento de Dados**  
-  - Limpeza de texto e remoção de tags HTML.  
-  - Classificação de sentimento usando abordagem baseada em regras.  
-  - Preparação de dados para visualização no dashboard.
+**Decisão 1: Limpeza de texto**  
+- Combinação de título + descrição para análise mais completa.  
+- Remoção de tags HTML, caracteres especiais e padronização para minúsculas.
 
-- **Etapa 3: Visualização e Dashboard**  
-  - Streamlit com gráficos, nuvem de palavras e tabela interativa.
+**Decisão 2: Análise de sentimento baseada em regras**  
+- Listas de palavras positivas e negativas definidas manualmente.  
+- Score simples (+1 para positivo, -1 para negativo).  
+- Classificação final: Positivo, Negativo ou Neutro.  
+- Escolha baseada em simplicidade, explicabilidade e transparência para o case.
+
+**Decisão 3: Armazenamento dos dados processados**  
+- Salvos em `data/noticias_processadas.csv`.  
+- Permite integração direta com visualização futura no Streamlit.
+
+**Decisão 4: Tratamento de erros**  
+- Arquivo de entrada não encontrado → instrução clara para executar a Etapa 1.  
+- CSV vazio → evita processamento desnecessário.  
+- Erro ao salvar → captura exceção.
 
 ---
+
+### Próximos passos planejados
+
+- Etapa 3: Dashboard em Streamlit (gráficos de pizza, nuvem de palavras e tabela interativa).  
+- Etapas 4–6: Versionamento, ética, transparência e documentação final.
 
 **Observação:**  
 Esta documentação será atualizada conforme novas decisões forem tomadas nas próximas etapas do projeto.

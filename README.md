@@ -17,10 +17,12 @@ O projeto segue boas práticas de **Python, Git e Streamlit**, garantindo **orga
 - Campos extraídos: título, link, descrição, data de publicação e fonte.  
 - Dados salvos em **`data/noticias_coletadas.csv`**.
 
-### Etapa 2 – Processamento de Dados 🔜
-- Limpeza de texto (remoção de tags HTML e caracteres especiais).  
-- Classificação de sentimento usando abordagem baseada em regras.  
-- Preparação de dados para visualização no dashboard.
+### Etapa 2 – Processamento de Dados e Análise de Sentimento ✅
+- Limpeza de textos: remoção de tags HTML, caracteres especiais e padronização de minúsculas.  
+- Combinação de título + descrição para análise mais completa.  
+- Classificação de sentimento usando **abordagem baseada em regras**.  
+- Resultados salvos em **`data/noticias_processadas.csv`**.  
+- Resumo da análise exibido no terminal.
 
 ### Etapa 3 – Visualização 🔜
 - Dashboard interativo em **Streamlit** com:  
@@ -67,5 +69,9 @@ bash
 Copiar código
 python coleta_dados.py
 Verificar CSV gerado
-
 Local: data/noticias_coletadas.csv
+
+python processamento_sentimento.py
+Verificar CSV gerado
+
+Local: data/noticias_processadas.csv
