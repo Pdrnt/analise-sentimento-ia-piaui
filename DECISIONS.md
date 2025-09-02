@@ -77,8 +77,45 @@
 - Estrutura de pastas mantém os CSVs na pasta `data/` para **organização e reprodutibilidade**.
 
 ---
-### Próximos passos planejados
-- Etapas 4–6: Versionamento, ética, transparência e documentação final.
+### Etapa 4 – Versionamento ✅
+
+**Decisão 1: Organização do repositório**  
+- Estrutura clara com pastas e arquivos principais:  
+  - `data/` → arquivos CSV gerados.  
+  - `app.py` → dashboard Streamlit.  
+  - `main.py` e `processamento.py` → scripts de coleta e análise.  
+  - `README.md` e `DECISIONS.md` → documentação.  
+- Commits frequentes e claros para demonstrar **progresso e rastreabilidade**.
+
+**Decisão 2: Documentação no Git**  
+- Arquivos de instrução (`README.md`) e de decisões (`DECISIONS.md`) versionados.  
+- `requirements.txt` mantido atualizado com dependências do projeto.  
+
+---
+
+### Etapa 5 – Ética e Transparência ✅
+
+**Decisão 1: Aviso de limitações**  
+- Inclusão de rodapé no dashboard informando:  
+  > "Esta análise de sentimento é baseada em regras simples e pode não capturar sarcasmo ou contextos complexos."
+
+**Decisão 2: Uso de IA**  
+- IA foi usada como **ferramenta de apoio**: sugestões de sintaxe, boas práticas e estruturação do projeto.  
+- Desenvolvedor humano validou, ajustou e integrou todas as soluções.  
+
+---
+
+### Etapa 6 – Documentação de Decisões ✅
+
+**Decisão 1: Abordagem de regras vs. ML**  
+- Optamos por análise baseada em regras pela **simplicidade, explicabilidade e transparência**.  
+- Um modelo de ML poderia ser mais preciso, mas exigiria mais dados, treinamento e validação, o que foge do escopo do case.
+
+**Decisão 2: Falta de notícias ou erros no RSS**  
+- Implementamos tratamento de exceções robusto:  
+  - Se o feed RSS estiver indisponível, o script exibe mensagem clara e não quebra a execução.  
+  - Se nenhuma notícia for retornada, o CSV final será vazio e a próxima etapa será avisada.  
+- Isso garante **robustez e previsibilidade** do pipeline.
 
 **Observação:**  
 Esta documentação será atualizada conforme novas decisões forem tomadas nas próximas etapas do projeto.
