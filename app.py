@@ -29,7 +29,7 @@ def carregar_dados(caminho_arquivo: str) -> pd.DataFrame:
 
 def main():
     st.title("🤖 Análise de Sentimento sobre IA no Piauí")
-    st.markdown(f"Dashboard para monitoramento de notícias sobre Inteligência Artificial no Piauí em tempo real. (Atualizado em: {pd.Timestamp.now().strftime('%d/%m/%Y às %H:%M')})")
+    st.markdown(f"Dashboard para monitoramento de notícias sobre Inteligência Artificial no Piauí. (Dados atualizados em: {pd.Timestamp.now('America/Sao_Paulo').strftime('%d/%m/%Y às %H:%M')})")
 
     # Carrega os dados
     caminho_dados = os.path.join('data', 'noticias_processadas.csv')
@@ -92,6 +92,10 @@ def main():
     # Seleciona colunas relevantes para exibição
     df_exibicao = df[['titulo', 'fonte', 'data_publicacao', 'sentimento', 'link']]
     st.dataframe(df_exibicao, use_container_width=True, height=300)
+
+    # --- Rodapé (Etapa 5) ---
+    st.markdown("---") # Adiciona uma linha horizontal para separar
+    st.caption("Esta análise de sentimento é baseada em regras simples e pode não capturar sarcasmo ou contextos complexos.")
 
 # --- Bloco de Execução Principal ---
 if __name__ == "__main__":
