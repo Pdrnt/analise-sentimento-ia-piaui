@@ -46,9 +46,38 @@
 
 ---
 
-### Próximos passos planejados
+### Etapa 3 – Dashboard Streamlit
 
-- Etapa 3: Dashboard em Streamlit (gráficos de pizza, nuvem de palavras e tabela interativa).  
+**Decisão 1: Criação do dashboard**  
+- Arquivo criado: `app.py`.  
+- Optamos por Streamlit por ser **rápido, interativo e fácil de compartilhar**.  
+- Permite exibir gráficos e tabelas diretamente no navegador sem front-end complexo.
+
+**Decisão 2: Métricas principais (KPIs)**  
+- Total de notícias coletadas.  
+- Contagem e percentual de sentimentos: Positivo, Negativo e Neutro.  
+- Escolha dessas métricas para fornecer uma **visão rápida e clara** do cenário de notícias.
+
+**Decisão 3: Visualizações**  
+- **Gráfico de pizza/roça** mostrando a distribuição de sentimentos.  
+- **Nuvem de palavras** gerada a partir do texto limpo das notícias, destacando os termos mais frequentes.  
+- **Tabela interativa** com: título, fonte, data de publicação, sentimento e link.  
+- Objetivo: permitir análise detalhada e visualização intuitiva dos dados.
+
+**Decisão 4: Cache de dados**  
+- Uso de `@st.cache_data` para evitar recarregar o CSV a cada interação, melhorando **performance** do dashboard.  
+
+**Decisão 5: Tratamento de erros e limitações**  
+- Arquivo de entrada não encontrado → mensagem de erro clara no dashboard.  
+- CSV vazio → aviso ao usuário e interrupção do dashboard para evitar erros.  
+- Limitação: análise de sentimento ainda **baseada em regras simples**, pode não capturar sarcasmo ou contextos complexos.
+
+**Decisão 6: Rodando o dashboard**  
+- Comando: `streamlit run app.py`.  
+- Estrutura de pastas mantém os CSVs na pasta `data/` para **organização e reprodutibilidade**.
+
+---
+### Próximos passos planejados
 - Etapas 4–6: Versionamento, ética, transparência e documentação final.
 
 **Observação:**  

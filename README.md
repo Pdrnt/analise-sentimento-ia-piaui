@@ -24,11 +24,14 @@ O projeto segue boas práticas de **Python, Git e Streamlit**, garantindo **orga
 - Resultados salvos em **`data/noticias_processadas.csv`**.  
 - Resumo da análise exibido no terminal.
 
-### Etapa 3 – Visualização 🔜
-- Dashboard interativo em **Streamlit** com:  
-  - Gráfico de pizza (distribuição de sentimentos: positivo, negativo, neutro).  
-  - Nuvem de palavras com termos mais frequentes.  
-  - Tabela interativa com notícias coletadas.
+### Etapa 3 – Dashboard Streamlit ✅
+- Arquivo: `app.py`.
+- Métricas principais (KPIs): total de notícias, contagem e percentual por sentimento.  
+- Gráfico de pizza/roça mostrando a distribuição de sentimentos.  
+- Nuvem de palavras com termos mais frequentes.  
+- Tabela interativa com título, fonte, data, sentimento e link.  
+- Rodar com: `streamlit run app.py`.  
+- Dashboard atualizado em tempo real com data e hora da execução.
 
 ### Etapa 4 – Versionamento 🔜
 - Repositório organizado no GitHub com commits claros e frequentes.  
@@ -49,29 +52,33 @@ O projeto segue boas práticas de **Python, Git e Streamlit**, garantindo **orga
 ```bash
 git clone https://github.com/seuusuario/case2-painel-ia-piaui.git
 cd case2-painel-ia-piaui
-Criar e ativar ambiente virtual
 
-bash
-Copiar código
+2 - Criar e ativar ambiente virtual
+
 python -m venv venv
 # Linux/Mac
 source venv/bin/activate
 # Windows
 venv\Scripts\activate
-Instalar dependências
 
-bash
-Copiar código
+3 - Instalar dependências
+
 pip install -r requirements.txt
-Executar script de coleta de notícias
 
-bash
-Copiar código
-python coleta_dados.py
-Verificar CSV gerado
-Local: data/noticias_coletadas.csv
+4 - Executar Scripts
 
-python processamento_sentimento.py
-Verificar CSV gerado
+# Etapa 1 – Coleta
+python main.py
 
-Local: data/noticias_processadas.csv
+# Etapa 2 – Processamento e análise de sentimento
+python processamento.py
+
+# Etapa 3 – Dashboard
+streamlit run app.py
+
+
+Contato
+
+Pedro Lima – Estudante/Desenvolvedor
+
+Teresina, Piauí – Brasil
