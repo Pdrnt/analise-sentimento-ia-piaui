@@ -33,15 +33,15 @@ O projeto segue boas práticas de **Python, Git e Streamlit**, garantindo **orga
 - Rodar com: `streamlit run app.py`.  
 - Dashboard atualizado em tempo real com data e hora da execução.
 
-### Etapa 4 – Versionamento 🔜
+### Etapa 4 – Versionamento ✅
 - Repositório organizado no GitHub com commits claros e frequentes.  
 - Arquivos: `README.md`, `requirements.txt`, `main.py`, `DECISIONS.md`.
 
-### Etapa 5 – Ética e Transparência 🔜
+### Etapa 5 – Ética e Transparência ✅
 - Aviso sobre limitações da análise de sentimento (ex.: sarcasmo, contexto complexo).  
 - Explicação de quais códigos/etapas foram desenvolvidos com apoio de IA.
 
-### Etapa 6 – Documentação de Decisões 🔜
+### Etapa 6 – Documentação de Decisões ✅
 - Arquivo `DECISIONS.md` explicando escolhas de abordagem e tratamento de erros.
 
 ---
@@ -77,8 +77,17 @@ python processamento.py
 streamlit run app.py
 
 
-Contato
+🤝 Metodologia de Desenvolvimento e Uso de IA
 
+Este projeto foi desenvolvido em uma abordagem de programação em par com IA.
+
+A colaboração humano + IA ocorreu da seguinte forma:
+
+IA como apoio → prototipagem rápida, consultas técnicas (bibliotecas, Streamlit), correções em linhas de códigos, auxílio na estrutura do projeto e rascunhos de documentação.
+
+Humano como arquiteto → definição de requisitos, ajustes no código, validação de resultados e integração final.
+
+Contato.
 Pedro Lima – Estudante/Desenvolvedor
 
 Teresina, Piauí – Brasil
