@@ -35,7 +35,7 @@ O projeto segue boas práticas de **Python, Git e Streamlit**, garantindo **orga
 
 ### Etapa 4 – Versionamento ✅
 - Repositório organizado no GitHub com commits claros e frequentes.  
-- Arquivos: `README.md`, `requirements.txt`, `main.py`, `DECISIONS.md`.
+- Arquivos: `README.md`, `requirements.txt`, `DECISIONS.md`.
 
 ### Etapa 5 – Ética e Transparência ✅
 - Aviso sobre limitações da análise de sentimento (ex.: sarcasmo, contexto complexo).  
